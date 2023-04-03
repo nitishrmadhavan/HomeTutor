@@ -1,0 +1,105 @@
+@media(max-width:575px) {
+	#mynav ul li a {
+		background: rgb(0,0,0,0.7);
+	}
+	.banner_background {
+	height: auto;
+	}
+	.banner_text {
+		padding-top: 100px;
+	}
+	
+	.banner_svg {
+		margin-top: -10px;
+	}
+	.banner_text h1 {
+		font-size: 38px;
+		line-height: 30px;
+	}
+	.banner_text h3 {
+		padding-left: 0px;
+	}
+	.banner_text p {
+		padding: 2px;
+	}
+	.banner_btn{
+		text-align: center;
+	}
+	.footer_part {
+		margin-top: -58px;
+	}
+	.logo_text {
+		text-align: center;
+		margin-top: 26px;
+	}
+	.footer_part{
+		margin-top: -30px;
+		text-align: center ;
+	}
+	.footer_item  {
+		text-align: center ;
+	}
+}
+@media(min-width:576px) and (max-width:767px) {
+	#mynav ul li a {
+		background: rgb(0,0,0,0.7);
+	}
+	.banner_background {
+		height: auto;
+	}
+	.banner_text {
+		padding-top: 100px;
+	}
+	.banner_svg {
+		margin-top: -10px;
+	}
+	.banner_text h1 {
+		text-align: center;
+	}
+	.banner_text h3 {
+		text-align: center;
+	}
+	.banner_text p {
+		text-align: center;
+	}
+	.banner_btn{
+		text-align: center;
+	}
+	.footer_part {
+	margin-top: -58px;
+	}
+	.footer_item {
+		text-align: center ;
+	}
+	}
+@media(min-width:768px) and (max-width:991px) {
+	#mynav ul li a {
+		background: rgb(0,0,0,0.7);
+	}
+	.banner_text h1 {
+		font-size: 36px;
+		line-height: 30px;
+	}
+	.banner_background {
+		height: 70vh;
+	}
+	.banner_svg {
+		margin-top: 90px;
+	}	
+	.banner_text {
+		padding-top: 150px;
+	}
+	.footer_item{
+		text-align: center;
+	}
+}
+@media(min-width:992px) and (max-width:1199px) {
+
+	#mynav ul li a {
+		font-size: 14px;
+		padding: 10px 23px;
+		}
+	.banner_text h1 {
+		font-size: 48px;
+	}
+}

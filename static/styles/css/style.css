@@ -1,0 +1,149 @@
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:800|Open+Sans');
+
+.abo{
+  padding: 0;
+  margin: 0;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+/*menu Part Start-------*/
+.custom_nav {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding-top: 40px;
+
+}
+
+.logo{
+  text-transform: uppercase;
+  font-family: 'Work', sans-serif;
+  font-weight: 700; 
+  color: #c5d7ff !important;
+
+}
+
+.logo span{
+    text-transform: uppercase;
+    font-family: 'Work', sans-serif;
+    font-weight: 800; 
+    color: #5d63be !important;
+}
+
+#mynav ul li a {
+    font-family: 'Work', sans-serif;
+    color: #c7cdd4;
+    font-size: 16px;
+    padding: 10px 25px;
+    display: block;
+    transition: .5s;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+}
+
+/*menu Part End-------*/
+
+/*Banner Part Start-------*/
+
+.banner_background{
+  height: 80vh;
+
+}
+
+.banner_text {
+    padding-top: 170px;
+
+}
+
+.banner_text h1 {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    max-width: 600px;
+    line-height: 90px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    color: #342f72;
+    font-family: 'Work', sans-serif;
+}
+
+.banner_text h3 {
+    max-width: 600px;
+    margin-bottom: 10px;
+    color: #5d7cbe;
+    font-family: 'Work', sans-serif;
+}
+
+.banner_text p {
+    max-width: 600px;
+    margin-bottom: 10px;
+    color: #bcc4cc;
+    font-family: 'Work', sans-serif;
+}
+.banner_btn {
+  margin-top: 40px;
+}
+.btn1{
+    padding: 11px 22px;
+    border-radius: 30px;
+    transition: .5s;
+    line-height: 1.5rem;
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    text-transform: uppercase;
+    color: #fff;
+
+}
+
+.banner_svg{
+  margin-top: 40px;
+}
+
+.svg{
+  height: 100%;
+  width: 100%;
+}
+
+/*Banner Part End-------*/
+
+/*Footer Part Start-------*/
+
+
+
+.logo_text{
+  margin-top: 10px;
+}
+
+.footer_item h4{
+  text-transform: uppercase;
+  color: #342f72;
+  font-size: 42px;
+}
+.logo_text p{
+  margin-bottom: 10px;
+  color: #bcc4cc;
+  font-family: 'Work', sans-serif;
+}
+
+
+/*Footer Part End-------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

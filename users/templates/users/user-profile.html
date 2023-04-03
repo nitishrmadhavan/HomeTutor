@@ -1,0 +1,241 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <nav>
+        <a class="logo" href="#">Home Tutor</a>
+        <ul class="nav-bar">
+          <li class="nav-bar_item"><a href="{% url 'home' %}">Home</a></li>
+          <li class="nav-bar_item"><a href="{% url 'profiles' %}">Find A Tutor</a></li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-bar_item"><a href="{% url 'inbox' %}">Become A Tutor</a></li>
+          <li class="nav-bar_item"><a href="{% url 'faq' %}">FAQ</a></li>
+          <li class="nav-bar_item"><a href="{% url 'logout' %}">Logout</a></li>
+          {% else %}
+          <li class="nav-bar_item"><a href="{% url 'register' %}">Become a Tutor</a></li>
+          <li class="nav-bar_item"><a href="{% url 'faq' %}">FAQ</a></li>
+          <li class="nav-bar_item"><a href="{% url 'login' %}">Login/Sign Up</a></li>
+          {% endif %}
+        </ul>
+      </nav>
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static 'styles/css/style2.css' %}">
+    <link rel="stylesheet" href="{% static 'styles/css/nav.css' %}">
+
+</head>
+<body>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700">    
+<!-- header section starts  -->
+<header>
+
+    <div class="user">
+        <img src="{{ profile.profile_image.url }}" alt="">
+        <h3 class="name">{{profile.name}}</h3>
+        <p class="post"></p>
+        <h1 class="post">{{profile.bio}}</h1>
+        <a href="{% url 'create-message' profile.id %}"><button class="btn">Send Message<i class=""></i> </button></a>
+    </div>
+
+    
+
+</header>
+
+<!-- header section ends -->
+
+<div id="menu" class="fas fa-bars"></div>
+
+
+
+<!-- home section starts  -->
+
+
+<!-- home section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+<h1 class="heading"> <span>about</span> me </h1>
+
+<div class="row">
+
+    <div class="info">
+        <h3> <span> name : </span> {{profile.name}}</h3>
+        <h3> <span> age : </span> {{profile.age}} </h3>
+        <h3> <span> qualification : </span> {{profile.qualify1}}  </h3>
+        <h3> <span> Location : </span>{{profile.location}} </h3>
+        <h3> <span> language : </span> {{profile.lang}} </h3>
+        
+    </div>
+
+    <div class="counter">
+
+        <div class="box">
+            <span>{{profile.exp}}</span>
+            <h3>years of experience</h3>
+        </div>
+
+        <div class="box">
+            <span>{{profile.noofsession}}</span>
+            <h3>Sessions Done</h3>
+        </div>
+
+        <div class="box">
+            <span>{{profile.hours}}</span>
+            <h3>Hours of teaching</h3>
+        </div>
+
+        <div class="box">
+            <span>{{profile.noofstudents}}</span>
+            <h3>No of students</h3>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- education section starts  -->
+
+
+
+<h1 class="heading"> my <span>education</span> </h1>
+
+<section class="timeline-section">
+	<div class="timeline-items">
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date"></div>
+			<div class="timeline-content">
+				<h3>Qualification 1</h3>
+				<p>{{profile.qualify1}}</p>
+			</div>
+		</div>
+		<div class="timeline-item">
+			<div class="timeline-dot"></div>
+			<div class="timeline-date"></div>
+			<div class="timeline-content">
+				<h3>Qualification 2</h3>
+				<p>{{profile.qualify2}}</p>
+			</div>
+		</div>
+		
+		
+		
+		
+	</div>
+</section>
+
+
+
+<!-- education section ends -->
+
+<!-- portfolio section starts  -->
+
+<section >
+
+<h1 class="heading"> <span>What Class i teach</span> </h1>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face front-face"> <img src="{% static 'images/image/istockphoto-953455920-612x612.jpg' %}" alt="" class="profile">
+                    <h1 class="heading"> <span>{{profile.class1}}</span>  </h1>
+                   
+                </div>
+                <div class="face back-face"> <span class="fas fa-quote-left"></span>
+                    <h1 class="post">{{profile.topicsinc1}}</h1>  <span class="fas fa-quote-right"></span>
+                </div>
+            </div>
+        </div>
+        
+        
+     
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="face front-face"> <img src="{% static 'images/image/istockphoto-953455920-612x612.jpg' %}" alt="" class="profile">
+                    <h1 class="heading"> <span>{{profile.class2}}</span>  </h1>
+                    
+                </div>
+                <div class="face back-face"> <span class="fas fa-quote-left"></span>
+                    <h1 class="post">{{profile.topicsinc2}}</h1>  <span class="fas fa-quote-right"></span>
+                </div>
+            </div>
+        </div>
+     
+    </div>
+</div>
+
+
+</section>
+
+    
+
+
+<!-- portfolio section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+<h1 class="heading"> <span>Contact</span> Info </h1>
+
+<div class="row">
+
+    <div class="content">
+
+       
+
+        <div class="info">
+            <h3> <i class="fas fa-envelope"></i>{{profile.email}} </h3>
+            <h3> <i class="fas fa-phone"></i> {{profile.phone}} </h3>
+            
+            <h3> <i class="fas fa-map-marker-alt"></i> {{profile.location}} </h3>
+           
+        </div>
+
+    </div>
+
+
+    
+</div>
+
+</section>
+
+<!-- contact section ends -->
+
+
+<!-- scroll top button  -->
+
+<a href="#home" class="top">
+    <img src="images/scroll-top-img.png" alt="">
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+<script src="review.js"></script>
+</body>
+</html>

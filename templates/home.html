@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/style.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/responsive.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/why.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/tetimonials.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/counter.css" %}'>
+    <link rel="stylesheet" type="text/css" href='{% static "styles/css/footer.css" %}'>
+    <script src="js/script2.js"></script>
+    <script src="js/footer.js"></script>
+  </head>
+  <body style="background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);">
+
+    <!-- Nav + MenuBar Start-->
+    <div class="abo"> 
+    <section>
+
+      <nav class="navbar navbar-expand-lg navbar-light custom_nav">
+        <div class="container">
+          <a class="navbar-brand logo" href="{% url 'home' %}" >Home<span>Tutor</span></a>
+
+           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mynav" aria-controls="mynav" aria-expanded="false" aria-label="Toggle navigation">
+             <img src="{%  static 'images/image/logos.png' %}" alt=""  /> 
+             <span class="navbar-toggler-icon"></span> 
+           </button>
+          
+          <div class="collapse navbar-collapse" id="mynav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item items active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item items">
+                <a class="nav-link" href="{% url 'profiles' %}">Find a Tutor</a>
+              </li>
+              <li class="nav-item items">
+                <a class="nav-link" href="{% url 'register' %}">Become a Tutor</a>
+              </li>
+              <li class="nav-item items">
+                <a class="nav-link" href="{% url 'faq' %}">Faq</a>
+              </li>
+              {% if request.user.is_authenticated %}
+              <li class="nav-item items">
+                <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+
+              </li>
+              
+
+              {% else %}
+              <li class="nav-item items">
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <br><br>
+      
+      <div class="banner_background">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 col-md-5 ">
+              <div class="banner_text">
+                <h1 style="color: aqua;">About us</h1>
+                
+                <h3></h3>
+                <p>To help those who learn and think differently to discover their potentials, take control, find community, and stay on positive paths along each stage of life’s journey.</p>
+              </div>
+              
+            </div>
+            <div class="col-lg-7 col-md-7 ">
+              <div class="banner_svg">
+                <img src="{% static 'images/image/school.svg' %}" class="svg" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+
+    <div class="why">    
+<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+<section id="section-about" class="about-section">
+      
+      <div class="heading"><b>Why</b> us ?</div>
+      <div class="all-sections">
+        <div data-aos="fade-right" class="mini-section">
+          <div class="hexagon">
+            <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+          </div><br>
+          <div class="text-mini-section">
+            <h1>Fast</h1>
+            <p>
+              Fast load times and lag free interaction
+            </p>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="mini-section">
+          <div class="hexagon">
+            <i class="fa fa-window-restore" aria-hidden="true"></i>
+          </div><br>
+          <div class="text-mini-section">
+            <h1>Responsive</h1>
+            <p>Teachers are responsive to their students</p>
+          </div>
+        </div>
+        <div data-aos="fade-up" class="mini-section">
+          <div class="hexagon">
+            <i class="fa fa-inr" aria-hidden="true"></i>  
+          </div><br>
+          <div class="text-mini-section">
+            <h1>Additional income</h1>
+            <p>Home tutoring is the best part time job option and Work part time and earn additional income</p>
+          </div>
+        </div>
+        <div data-aos="fade-left" class="mini-section">
+          <div class="hexagon">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+          </div><br>
+          <div class="text-mini-section">
+            <h1>Grades</h1>
+            <p>
+              Guided students learn & achieve better grades!
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    </div>
+    
+   <div class="tm">
+    <section>
+      <div class="heading"><b>Our</b> Testimonials</div>
+      <div class="wrapper">
+          <div class="container">
+              <div class="profile">
+                  <div class="imgBox">
+                      <img src="{% static 'images/image/img1.jpg' %}">
+                  </div>
+                  <h2>Teacher</h2>
+              </div>
+              <br><br>
+              <p><span class="fa fa-quote-left left"></span>Teaching is my passion and working as a home tutor supplements my income as a school teacher. Awesome home tutoring service<span class="fa fa-quote-right right"></span></p>
+              
+          </div>
+
+          <div class="container">
+              <div class="profile">
+                  <div class="imgBox">
+                      <img src="{% static 'images/image/img2.jpg' %}">
+                  </div>
+                  <h2>Student</h2>
+                  
+              </div>
+              <br><br>
+              <p><span class="fa fa-quote-left left"></span>In early stages,i used to struggle in maths. After getting a home tutor I am doing maths very easily and topped my class..<span class="fa fa-quote-right right"></span></p>
+          </div>
+
+          <div class="container">
+              <div class="profile">
+                  <div class="imgBox">
+                      <img src="{% static 'images/image/img3.jpg' %}">
+                  </div>
+                  <h2>Teacher</h2>
+              </div>
+              <br><br>
+              <p><span class="fa fa-quote-left left"></span>Taking up home tuitions as a home tutor boosts my income I earn from college as a lecturer. I liked your ability to find students to teach near my home.<span class="fa fa-quote-right right"></span></p>
+             
+          </div>
+      </div>
+  </section>
+</div>
+
+
+
+<div class="sectiontitle">
+  
+  <h1><b>Projects</b> statistics</h1>
+  <span class="headerLine"></span>
+</div>
+<div id="projectFacts" class="sectionClass">
+  <div class="fullWidth eight columns">
+      <div class="projectFactsWrap ">
+          <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible;">
+              <i class="fa fa-user"></i>
+              <p id="number1" class="number">12</p>
+              <span></span>
+              <p>No. of Teachers</p>
+          </div>
+          <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;">
+              <i class="fa fa-smile-o"></i>
+              <p id="number2" class="number">55+</p>
+              <span></span>
+              <p>Happy Students</p>
+          </div>
+          <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;">
+              <i class="fa fa-clipboard"></i>
+              <p id="number3" class="number">60+</p>
+              <span></span>
+              <p>Sessions Done</p>
+          </div>
+          <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;">
+              <i class="fa fa-trophy"></i>
+              <p id="number4" class="number">45+</p>
+              <span></span>
+              <p>Students Achivements</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<br><br><br>
+<footer class="footer">
+  <div class="waves">
+    <div class="wave" id="wave1"></div>
+    <div class="wave" id="wave2"></div>
+    <div class="wave" id="wave3"></div>
+    <div class="wave" id="wave4"></div>
+  </div>
+  <ul class="social-icon">
+    
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.youtube.com/watch?v=Smcf3zB4IXY&ab_channel=RohithR">
+        <ion-icon name="logo-youtube"></ion-icon>
+      </a></li>
+    <li class="social-icon__item"><a class="social-icon__link" href="https://www.instagram.com/_hometutor_/">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+  </ul>
+  <ul class="menu">
+    <li class="menu__item"><a class="menu__link" href="{% url 'home' %}">Home</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'profiles' %}">Find a Tutor</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'register' %}">Become a Tutor</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'faq' %}">FAQ</a></li>
+    <li class="menu__item"><a class="menu__link" href="{% url 'login' %}">Login</a></li>
+
+  </ul>
+  <p>@Home-Tutor All rights reserved</p>
+</footer>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+<script src="js/footer.js"></script>
+<script src="https://use.fontawesome.com/c8751d86c9.js"></script>
+
+
+</body>
+</html>
